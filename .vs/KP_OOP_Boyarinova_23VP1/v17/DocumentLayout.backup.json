@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\kp_oop_boyarinova_23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\proxydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\proxydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Program.cs",
+              "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\Program.cs",
+              "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Program.cs",
+              "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T14:40:03.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Participant.cs",
+              "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Participant.cs",
+              "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\Participant.cs",
+              "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Participant.cs",
+              "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\Participant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T04:11:35.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DB.cs",
+              "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\DB.cs",
+              "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\DB.cs",
+              "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\DB.cs",
+              "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\DB.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAMAswA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T18:16:50.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Form1.cs",
+              "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\Form1.cs",
+              "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Form1.cs",
+              "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\Form1.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAqwIsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T19:07:50.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Form1.cs",
+              "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\Form1.cs",
+              "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T17:06:34.041Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProxyDB.cs",
+              "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
+              "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
+              "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
+              "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAvwF0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T04:25:47.311Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{68487888-204a-11d3-87eb-00c04f7971a5}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
