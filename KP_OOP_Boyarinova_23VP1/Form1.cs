@@ -114,12 +114,12 @@ namespace KP_OOP_Boyarinova_23VP1
                     MessageBox.Show("Выберите специальность", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                ProxyDB.getInstance().Add(new Participant(name, post, name_of_report, theme, section, speciality, type_of_participate));
+                ProxyDB.getInstance().Add(new Participant(ProxyDB.getInstance().Size()+1, name, post, name_of_report, theme, section, speciality, type_of_participate));
             }
             else
             {
                 type_of_participate = "слушатель";
-                ProxyDB.getInstance().Add(new Participant(name, post, type_of_participate));
+                ProxyDB.getInstance().Add(new Participant(ProxyDB.getInstance().Size() + 1, name, post, type_of_participate));
             }
         }
 
@@ -183,61 +183,15 @@ namespace KP_OOP_Boyarinova_23VP1
                     MessageBox.Show("Выберите специальность", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (!ProxyDB.getInstance().Change(id, new Participant(name, post, name_of_report, theme, section, speciality, type_of_participate))) MessageBox.Show("Строки с таким индексом не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (!ProxyDB.getInstance().Change(id, new Participant(id, name, post, name_of_report, theme, section, speciality, type_of_participate))) MessageBox.Show("Строки с таким индексом не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else MessageBox.Show("Строка изменена", "", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
             else
             {
                 type_of_participate = "слушатель";
-                if (!ProxyDB.getInstance().Change(id, new Participant(name, post, type_of_participate))) MessageBox.Show("Строки с таким индексом не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (!ProxyDB.getInstance().Change(id, new Participant(id, name, post, type_of_participate))) MessageBox.Show("Строки с таким индексом не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else MessageBox.Show("Строка изменена", "", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
-            /*string name = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
-            if (!Regex.IsMatch(name, regex))
-            {
-                Win32.MessageBox(0, "Некорректное имя", "Ошибка ввода", 0);
-                return;
-            }
-            string post = comboBox1.Text;
-            if (post == "")
-            {
-                Win32.MessageBox(0, "Выберите должность", "Ошибка ввода", 0);
-                return;
-            }
-            string name_of_report = textBox4.Text;
-            if (!Regex.IsMatch(name_of_report, regex))
-            {
-                Win32.MessageBox(0, "Некорректное название доклада", "Ошибка ввода", 0);
-                return;
-            }
-            string theme = comboBox2.Text;
-            if (theme == "")
-            {
-                Win32.MessageBox(0, "Выберите тематику", "Ошибка ввода", 0);
-                return;
-            }
-            string section = comboBox3.Text;
-            if (section == "")
-            {
-                Win32.MessageBox(0, "Выберите секцию", "Ошибка ввода", 0);
-                return;
-            }
-            string speciality = comboBox4.Text;
-            if (speciality == "")
-            {
-                Win32.MessageBox(0, "Выберите специальность", "Ошибка ввода", 0);
-                return;
-            }
-            string type_of_participate;
-            if (!radioButton1.Checked && !radioButton2.Checked)
-            {
-                Win32.MessageBox(0, "Выберите тип участия", "Ошибка ввода", 0);
-                return;
-            }
-            if (radioButton2.Checked) type_of_participate = "участник";
-            else type_of_participate = "гость";
-            if (!ProxyDB.getInstance().Change(id, new Participant(name, post, name_of_report, theme, section, speciality, type_of_participate))) Win32.MessageBox(0, "Строки с таким индексом не существует", "", 0);
-            else Win32.MessageBox(0, "Строка изменена", "", 0);*/
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

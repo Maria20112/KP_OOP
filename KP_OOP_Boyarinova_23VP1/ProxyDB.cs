@@ -26,6 +26,11 @@ namespace KP_OOP_Boyarinova_23VP1
         public event PersonSort? NotifySort;
         public event PersonFilter? NotifyFilter;
 
+        public int Size()
+        {
+            return participants.Count;
+        }
+
         public void Clear_last_filter()
         {
             last_filter.Clear();
@@ -141,7 +146,7 @@ namespace KP_OOP_Boyarinova_23VP1
             {
 
                 // Добавление колонок
-                dataTable.Columns.Add("№ строки", typeof(int));
+                dataTable.Columns.Add("Id", typeof(int));
                 dataTable.Columns.Add("Имя", typeof(string));
                 dataTable.Columns.Add("Должность", typeof(string));
                 dataTable.Columns.Add("Название доклада", typeof(string));
@@ -150,13 +155,13 @@ namespace KP_OOP_Boyarinova_23VP1
                 dataTable.Columns.Add("Специальность", typeof(string));
                 dataTable.Columns.Add("Тип участия", typeof(string));
 
-                int counter = 1;
+                //int counter = 1;
                 // Добавление строк
                 foreach (Participant p in participants)
                 {
-                    dataTable.Rows.Add(counter, p.Name, p.Post, p.Name_of_report, p.Theme,
+                    dataTable.Rows.Add(p.Id, p.Name, p.Post, p.Name_of_report, p.Theme,
                         p.Section, p.Speciality, p.Type_of_participate);
-                    counter++;
+                    //counter++;
                 }
             }
             return dataTable;
