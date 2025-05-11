@@ -73,6 +73,7 @@
             label15 = new Label();
             textBox5 = new TextBox();
             panel5 = new Panel();
+            find_button = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -120,9 +121,9 @@
             // 
             // change_record
             // 
-            change_record.Location = new Point(73, 633);
+            change_record.Location = new Point(73, 616);
             change_record.Name = "change_record";
-            change_record.Size = new Size(162, 43);
+            change_record.Size = new Size(165, 28);
             change_record.TabIndex = 4;
             change_record.Text = "Изменить запись";
             change_record.UseVisualStyleBackColor = true;
@@ -132,7 +133,7 @@
             // 
             delete_record.Location = new Point(73, 583);
             delete_record.Name = "delete_record";
-            delete_record.Size = new Size(162, 44);
+            delete_record.Size = new Size(165, 27);
             delete_record.TabIndex = 5;
             delete_record.Text = "Удалить запись";
             delete_record.UseVisualStyleBackColor = true;
@@ -487,11 +488,22 @@
             panel5.Size = new Size(10, 232);
             panel5.TabIndex = 43;
             // 
+            // find_button
+            // 
+            find_button.Location = new Point(73, 651);
+            find_button.Name = "find_button";
+            find_button.Size = new Size(165, 29);
+            find_button.TabIndex = 44;
+            find_button.Text = "Найти запись";
+            find_button.UseVisualStyleBackColor = true;
+            find_button.Click += find_button_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1014, 763);
+            Controls.Add(find_button);
             Controls.Add(panel5);
             Controls.Add(textBox5);
             Controls.Add(label15);
@@ -593,5 +605,6 @@
         private Label label15;
         private TextBox textBox5;
         private Panel panel5;
+        private Button find_button;
     }
 }

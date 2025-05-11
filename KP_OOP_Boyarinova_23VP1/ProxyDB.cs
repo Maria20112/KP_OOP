@@ -174,6 +174,7 @@ namespace KP_OOP_Boyarinova_23VP1
             if (participants.Count > 0)
             {
                 // Добавление колонок
+                dataTable.Columns.Add("Id", typeof(int));
                 dataTable.Columns.Add("Имя", typeof(string));
                 dataTable.Columns.Add("Должность", typeof(string));
                 dataTable.Columns.Add("Название доклада", typeof(string));
@@ -186,11 +187,27 @@ namespace KP_OOP_Boyarinova_23VP1
                 // Добавление строк
                 foreach (Participant p in last_filter)
                 {
-                    dataTable.Rows.Add(p.Name, p.Post, p.Name_of_report, p.Theme,
+                    dataTable.Rows.Add(p.Id, p.Name, p.Post, p.Name_of_report, p.Theme,
                         p.Section, p.Speciality, p.Type_of_participate);
                 }
             }
             return dataTable;
+        }
+
+        public bool Find(int id)
+        {
+            if (id > participants.Count) return false;
+            foreach (Participant p in participants)
+            {
+                if (id == p.Id)
+                {
+                    last_filter.Clear();
+                    last_filter.Add(p);
+                    NotifyFilter?.Invoke();
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

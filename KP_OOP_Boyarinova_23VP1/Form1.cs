@@ -36,7 +36,7 @@ namespace KP_OOP_Boyarinova_23VP1
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Бояринова М.Г. 23ВП1 ИС 'Конференция'", "Курсовой проект", 
+            MessageBox.Show("Бояринова М.Г. 23ВП1 ИС 'Конференция'", "Курсовой проект",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //Win32.MessageBox(0, "Бояринова М.Г. 23ВП1 ИС 'Конференция'", "Курсовой проект", 0);
@@ -71,7 +71,7 @@ namespace KP_OOP_Boyarinova_23VP1
             if (!Regex.IsMatch(name, regex))
             {
                 MessageBox.Show("Некорректное имя", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-             //   Win32.MessageBox(0, "Некорректное имя", "Ошибка ввода", 0);
+                //   Win32.MessageBox(0, "Некорректное имя", "Ошибка ввода", 0);
                 return;
             }
             string post = comboBox1.Text;
@@ -114,7 +114,7 @@ namespace KP_OOP_Boyarinova_23VP1
                     MessageBox.Show("Выберите специальность", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                ProxyDB.getInstance().Add(new Participant(ProxyDB.getInstance().Size()+1, name, post, name_of_report, theme, section, speciality, type_of_participate));
+                ProxyDB.getInstance().Add(new Participant(ProxyDB.getInstance().Size() + 1, name, post, name_of_report, theme, section, speciality, type_of_participate));
             }
             else
             {
@@ -263,6 +263,14 @@ namespace KP_OOP_Boyarinova_23VP1
         private async void save_into_file_Click(object sender, EventArgs e)
         {
             await DB.Export();
+        }
+
+        private void find_button_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(numericUpDown1.Value);
+            //id--;
+            ProxyDB.getInstance().NotifyFilter += changeFilterTable;
+            if (!ProxyDB.getInstance().Find(id)) MessageBox.Show("Id не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

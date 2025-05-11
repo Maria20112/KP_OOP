@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\proxydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\kp_oop_boyarinova_23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|solutionrelative:kp_oop_boyarinova_23vp1\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046FE062-72CD-4D1B-9615-AAC2A95530CC}|KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1.csproj|d:\\\u043F\u0433\u0443\\c#\\kp_oop_boyarinova_23vp1\\kp_oop_boyarinova_23vp1\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,12 +70,11 @@
               "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\Participant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T04:11:35.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T04:11:35.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DB.cs",
               "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\DB.cs",
               "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\DB.cs",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\DB.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAswM0AAACLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T18:16:50.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T18:16:50.233Z"
             },
             {
               "$type": "Document",
@@ -94,14 +92,14 @@
               "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\Form1.cs",
               "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Form1.cs",
               "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\Form1.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAswHIAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAqwAsBAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T19:07:50.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\Form1.cs",
               "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\Form1.cs",
@@ -119,7 +117,7 @@
               "RelativeDocumentMoniker": "KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
               "ToolTip": "D:\\\u041F\u0433\u0443\\C#\\KP_OOP_Boyarinova_23VP1\\KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
               "RelativeToolTip": "KP_OOP_Boyarinova_23VP1\\ProxyDB.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAADgv70AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T04:25:47.311Z",
               "EditorCaption": ""
