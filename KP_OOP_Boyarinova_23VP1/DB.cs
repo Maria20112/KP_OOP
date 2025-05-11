@@ -1,9 +1,9 @@
 ﻿using iTextSharp;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;                  //добавить картинку во всплывающее окно при старте, кнопки Сортировать и т.д. в заголовок
-using System.Data;                            //выровнять все поля ввода по левому краю
-using System.Diagnostics;                     //удаление не происходит из-за незакрытого sqlconnection
+using System.ComponentModel; 
+using System.Data; 
+using System.Diagnostics; 
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -179,36 +179,6 @@ namespace KP_OOP_Boyarinova_23VP1
                                 ProxyDB.getInstance().Add(new Participant(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),
                                     reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7)));
                             }
-                        }
-                    }
-                }
-            }
-            else MessageBox.Show("Базы данных не существует", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        public static async Task Filter(string field, string value)
-        {
-            if (CheckDatabase())
-            {
-                ProxyDB.getInstance().Clear_last_filter();
-                string sqlExpression = $"SELECT * FROM Users WHERE {field} = '{value}'";
-
-                using (SqlConnection connection = new SqlConnection(databaseConnectionString))
-                {
-                    await connection.OpenAsync();
-                    SqlCommand command = new SqlCommand(sqlExpression, connection);
-                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
-                    {
-                        if (reader.HasRows) // если есть данные
-                        {
-                            while (await reader.ReadAsync()) // построчно считываем данные
-                            {
-                                ProxyDB.getInstance().Add_filter(new Participant(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),
-                                    reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7)));
-                            }
-                        }
-                        else
-                        {
-                            ProxyDB.getInstance().Add_filter(null);
                         }
                     }
                 }

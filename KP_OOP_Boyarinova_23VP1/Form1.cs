@@ -221,43 +221,16 @@ namespace KP_OOP_Boyarinova_23VP1
 
         private async void filter_records_Click(object sender, EventArgs e)
         {
-            await ProxyDB.getInstance().synchronize_with_DB();
             //если не существует объектов, подходящих под условие - просто пустая таблица
-            string field, value = textBox5.Text;
-            if (!Regex.IsMatch(value, regex))
+            string field = comboBox5.Text, value = textBox5.Text;
+            if (value == "") MessageBox.Show("Некорректное значение поля для фильтрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            /*if (!Regex.IsMatch(value, regex))
             {
                 MessageBox.Show("Некорректное значение поля для фильтрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-            switch (comboBox5.Text)
-            {
-                case "Имя":
-                    field = "Name";
-                    break;
-                case "Должность":
-                    field = "PostOfParticipant";
-                    break;
-                case "Название доклада":
-                    field = "NameOfReport";
-                    break;
-                case "Тематика":
-                    field = "Theme";
-                    break;
-                case "Секция":
-                    field = "Section";
-                    break;
-                case "Специальность":
-                    field = "Speciality";
-                    break;
-                case "Тип участия":
-                    field = "TypeOfParticipate";
-                    break;
-                default:
-                    MessageBox.Show("Выберите поле для фильтрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-            }
+            }*/
             ProxyDB.getInstance().NotifyFilter += changeFilterTable;
-            DB.Filter(field, value);
+            ProxyDB.getInstance().Filter(field, value);
         }
 
         private async void save_into_file_Click(object sender, EventArgs e)
@@ -271,6 +244,11 @@ namespace KP_OOP_Boyarinova_23VP1
             //id--;
             ProxyDB.getInstance().NotifyFilter += changeFilterTable;
             if (!ProxyDB.getInstance().Find(id)) MessageBox.Show("Id не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

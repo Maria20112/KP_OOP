@@ -14,7 +14,7 @@ namespace KP_OOP_Boyarinova_23VP1
     {
         private static ProxyDB instance;
         private List<Participant> participants = new List<Participant>();
-        private List<Participant> last_filter = new List<Participant>();
+        private IOrderedEnumerable<Participant> last_filter;
         public delegate void PersonAdd();
         public delegate void PersonRemove();
         public delegate void PersonUpdate();
@@ -31,10 +31,6 @@ namespace KP_OOP_Boyarinova_23VP1
             return participants.Count;
         }
 
-        public void Clear_last_filter()
-        {
-            last_filter.Clear();
-        }
         public void Sort(bool type)
         {
             if (type) participants.Sort((x, y) => x.Name.CompareTo(y.Name)); //по возрастанию
@@ -53,7 +49,64 @@ namespace KP_OOP_Boyarinova_23VP1
 
         public void Add_filter(Participant? p)
         {
-            if (p != null) last_filter.Add(p);
+            NotifyFilter?.Invoke();
+        }
+
+        public void Filter(string field, string value)
+        {
+            switch (field) {
+                case "Id":
+                    last_filter = from p in participants
+                                  where Convert.ToString(p.Id) == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Имя":
+                    last_filter = from p in participants
+                                  where p.Name == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Должность":
+                    last_filter = from p in participants
+                                  where p.Post == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Название доклада":
+                    last_filter = from p in participants
+                                  where p.Name_of_report == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Тематика":
+                    last_filter = from p in participants
+                                  where p.Theme == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Секция":
+                    last_filter = from p in participants
+                                  where p.Section == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Специальность":
+                    last_filter = from p in participants
+                                  where p.Speciality == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                case "Тип участия":
+                    last_filter = from p in participants
+                                  where p.Type_of_participate == value
+                                  orderby p.Id
+                                  select p;
+                    break;
+                default:
+                    MessageBox.Show("Выберите поле для фильтрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+            }
             NotifyFilter?.Invoke();
         }
 
@@ -131,12 +184,7 @@ namespace KP_OOP_Boyarinova_23VP1
         {
             synchronize_with_DB();
         }
-        private ProxyDB() {
-            //DB.Get_all_from_DB();
-            //Task task = DB.Get_all_from_DB();
-            //task.Start();
-            //task.Wait();
-        }
+        private ProxyDB() {}
 
         public DataTable GenerateData()
         {
@@ -155,13 +203,11 @@ namespace KP_OOP_Boyarinova_23VP1
                 dataTable.Columns.Add("Специальность", typeof(string));
                 dataTable.Columns.Add("Тип участия", typeof(string));
 
-                //int counter = 1;
                 // Добавление строк
                 foreach (Participant p in participants)
                 {
                     dataTable.Rows.Add(p.Id, p.Name, p.Post, p.Name_of_report, p.Theme,
                         p.Section, p.Speciality, p.Type_of_participate);
-                    //counter++;
                 }
             }
             return dataTable;
@@ -183,7 +229,6 @@ namespace KP_OOP_Boyarinova_23VP1
                 dataTable.Columns.Add("Специальность", typeof(string));
                 dataTable.Columns.Add("Тип участия", typeof(string));
 
-                int counter = 0;
                 // Добавление строк
                 foreach (Participant p in last_filter)
                 {
@@ -197,15 +242,14 @@ namespace KP_OOP_Boyarinova_23VP1
         public bool Find(int id)
         {
             if (id > participants.Count) return false;
-            foreach (Participant p in participants)
+            last_filter = from p in participants
+                          where p.Id == id
+                          orderby p.Id
+                          select p;
+            if (last_filter.Count() > 0)
             {
-                if (id == p.Id)
-                {
-                    last_filter.Clear();
-                    last_filter.Add(p);
-                    NotifyFilter?.Invoke();
-                    return true;
-                }
+                NotifyFilter?.Invoke();
+                return true;
             }
             return false;
         }

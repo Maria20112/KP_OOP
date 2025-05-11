@@ -74,6 +74,7 @@
             textBox5 = new TextBox();
             panel5 = new Panel();
             find_button = new Button();
+            label16 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -91,7 +92,7 @@
             // 
             // delete_bd
             // 
-            delete_bd.Location = new Point(207, 702);
+            delete_bd.Location = new Point(231, 702);
             delete_bd.Name = "delete_bd";
             delete_bd.Size = new Size(160, 49);
             delete_bd.TabIndex = 1;
@@ -101,7 +102,7 @@
             // 
             // save_into_file
             // 
-            save_into_file.Location = new Point(400, 702);
+            save_into_file.Location = new Point(450, 703);
             save_into_file.Name = "save_into_file";
             save_into_file.Size = new Size(160, 48);
             save_into_file.TabIndex = 2;
@@ -141,7 +142,7 @@
             // 
             // sort_records
             // 
-            sort_records.Location = new Point(520, 11);
+            sort_records.Location = new Point(1018, 5);
             sort_records.Name = "sort_records";
             sort_records.Size = new Size(162, 43);
             sort_records.TabIndex = 6;
@@ -151,9 +152,9 @@
             // 
             // filter_records
             // 
-            filter_records.Location = new Point(728, 10);
+            filter_records.Location = new Point(1207, 5);
             filter_records.Name = "filter_records";
-            filter_records.Size = new Size(162, 44);
+            filter_records.Size = new Size(163, 43);
             filter_records.TabIndex = 7;
             filter_records.Text = "Фильтровать записи";
             filter_records.UseVisualStyleBackColor = true;
@@ -161,7 +162,7 @@
             // 
             // exit
             // 
-            exit.Location = new Point(908, 722);
+            exit.Location = new Point(1286, 712);
             exit.Name = "exit";
             exit.Size = new Size(94, 29);
             exit.TabIndex = 8;
@@ -340,9 +341,10 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(73, 28);
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label10.Location = new Point(68, 17);
             label10.Name = "label10";
-            label10.Size = new Size(165, 20);
+            label10.Size = new Size(170, 20);
             label10.TabIndex = 28;
             label10.Text = "Создать новую запись";
             // 
@@ -358,9 +360,10 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label11.Location = new Point(57, 509);
             label11.Name = "label11";
-            label11.Size = new Size(181, 20);
+            label11.Size = new Size(185, 20);
             label11.TabIndex = 30;
             label11.Text = "Выберите номер записи";
             // 
@@ -369,7 +372,7 @@
             panel1.BackColor = SystemColors.ControlDark;
             panel1.Location = new Point(0, 686);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1016, 10);
+            panel1.Size = new Size(1386, 10);
             panel1.TabIndex = 31;
             // 
             // panel2
@@ -403,22 +406,23 @@
             dataGridView1.Location = new Point(333, 60);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(669, 395);
+            dataGridView1.Size = new Size(1053, 403);
             dataGridView1.TabIndex = 34;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(333, 28);
+            label12.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label12.Location = new Point(805, 14);
             label12.Name = "label12";
-            label12.Size = new Size(115, 20);
+            label12.Size = new Size(137, 23);
             label12.TabIndex = 35;
             label12.Text = "Вывод записей";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(557, 472);
+            label13.Location = new Point(764, 495);
             label13.Name = "label13";
             label13.Size = new Size(119, 20);
             label13.TabIndex = 36;
@@ -427,8 +431,8 @@
             // comboBox5
             // 
             comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "Имя", "Должность", "Название доклада", "Тематика", "Секция", "Специальность", "Тип участия" });
-            comboBox5.Location = new Point(557, 495);
+            comboBox5.Items.AddRange(new object[] { "Id", "Имя", "Должность", "Название доклада", "Тематика", "Секция", "Специальность", "Тип участия" });
+            comboBox5.Location = new Point(764, 518);
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(151, 28);
             comboBox5.TabIndex = 37;
@@ -436,16 +440,17 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(333, 472);
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label14.Location = new Point(409, 472);
             label14.Name = "label14";
-            label14.Size = new Size(124, 20);
+            label14.Size = new Size(201, 20);
             label14.TabIndex = 38;
-            label14.Text = "Сортировать по:";
+            label14.Text = "Сортировать по имени по:";
             // 
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(333, 505);
+            radioButton3.Location = new Point(436, 505);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(123, 24);
             radioButton3.TabIndex = 39;
@@ -456,7 +461,7 @@
             // radioButton4
             // 
             radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(333, 535);
+            radioButton4.Location = new Point(436, 535);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(105, 24);
             radioButton4.TabIndex = 40;
@@ -467,7 +472,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(557, 537);
+            label15.Location = new Point(764, 560);
             label15.Name = "label15";
             label15.Size = new Size(351, 20);
             label15.TabIndex = 41;
@@ -475,7 +480,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(557, 560);
+            textBox5.Location = new Point(764, 583);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(125, 27);
             textBox5.TabIndex = 42;
@@ -483,7 +488,7 @@
             // panel5
             // 
             panel5.BackColor = SystemColors.ControlDark;
-            panel5.Location = new Point(516, 461);
+            panel5.Location = new Point(712, 464);
             panel5.Name = "panel5";
             panel5.Size = new Size(10, 232);
             panel5.TabIndex = 43;
@@ -498,11 +503,24 @@
             find_button.UseVisualStyleBackColor = true;
             find_button.Click += find_button_Click;
             // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label16.Location = new Point(758, 472);
+            label16.Name = "label16";
+            label16.Size = new Size(184, 20);
+            label16.TabIndex = 45;
+            label16.Text = "Настройки фильтрации:";
+            label16.Click += label16_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1014, 763);
+            BackColor = Color.OldLace;
+            ClientSize = new Size(1392, 772);
+            Controls.Add(label16);
             Controls.Add(find_button);
             Controls.Add(panel5);
             Controls.Add(textBox5);
@@ -548,6 +566,7 @@
             Controls.Add(save_into_file);
             Controls.Add(delete_bd);
             Controls.Add(create_bd);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
             Text = "ИС \"Конференция\"";
             Load += Form1_Load;
@@ -606,5 +625,6 @@
         private TextBox textBox5;
         private Panel panel5;
         private Button find_button;
+        private Label label16;
     }
 }
