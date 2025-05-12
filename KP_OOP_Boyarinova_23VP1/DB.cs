@@ -54,7 +54,8 @@ namespace KP_OOP_Boyarinova_23VP1
                 {
                     await connection.OpenAsync();
                     SqlCommand command1 = new SqlCommand();
-                    command1.CommandText = "CREATE TABLE Users (Id INT PRIMARY KEY IDENTITY(1,1),Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
+                    command1.CommandText = "CREATE TABLE Users (Id INT PRIMARY KEY,Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
+                    //command1.CommandText = "CREATE TABLE Users (Id INT PRIMARY KEY IDENTITY(1,1),Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
                     //command1.CommandText = "CREATE TABLE Users (Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
                     command1.Connection = connection;
                     await command1.ExecuteNonQueryAsync();
@@ -141,7 +142,7 @@ namespace KP_OOP_Boyarinova_23VP1
             {
                 //if ()
                 //string sqlExpression = $"INSERT INTO Users (Name) VALUES ('{p.Name}')";
-                string sqlExpression = $"INSERT INTO Users (Name, PostOfParticipant, NameOfReport, Theme, Section, Speciality, TypeOfParticipate) VALUES ('{p.Name}', '{p.Post}', '{p.Name_of_report}', '{p.Theme}', '{p.Section}', '{p.Speciality}', '{p.Type_of_participate}')";
+                string sqlExpression = $"INSERT INTO Users (Id, Name, PostOfParticipant, NameOfReport, Theme, Section, Speciality, TypeOfParticipate) VALUES ('{p.Id}', '{p.Name}', '{p.Post}', '{p.Name_of_report}', '{p.Theme}', '{p.Section}', '{p.Speciality}', '{p.Type_of_participate}')";
 
                 using (SqlConnection connection = new SqlConnection(databaseConnectionString))
                 {

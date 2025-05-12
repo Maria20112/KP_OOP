@@ -139,8 +139,8 @@ namespace KP_OOP_Boyarinova_23VP1
         {
             if (DB.CheckDatabase())
             {
-                if (id >= participants.Count) return false;
-                participants.Remove(participants[id]);
+                if (!Find(id)) return false;
+                participants.Remove(last_filter.First());
                 NotifyRemove?.Invoke();
                 return true;
             }

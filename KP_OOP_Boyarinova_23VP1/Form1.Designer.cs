@@ -75,6 +75,7 @@
             panel5 = new Panel();
             find_button = new Button();
             label16 = new Label();
+            print_allbutton = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -514,12 +515,23 @@
             label16.Text = "Настройки фильтрации:";
             label16.Click += label16_Click;
             // 
+            // print_allbutton
+            // 
+            print_allbutton.Location = new Point(333, 5);
+            print_allbutton.Name = "print_allbutton";
+            print_allbutton.Size = new Size(143, 43);
+            print_allbutton.TabIndex = 46;
+            print_allbutton.Text = "Вывести все";
+            print_allbutton.UseVisualStyleBackColor = true;
+            print_allbutton.Click += print_allbutton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
             ClientSize = new Size(1392, 772);
+            Controls.Add(print_allbutton);
             Controls.Add(label16);
             Controls.Add(find_button);
             Controls.Add(panel5);
@@ -626,5 +638,6 @@
         private Panel panel5;
         private Button find_button;
         private Label label16;
+        private Button print_allbutton;
     }
 }

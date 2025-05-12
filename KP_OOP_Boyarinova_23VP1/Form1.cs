@@ -8,12 +8,22 @@ namespace KP_OOP_Boyarinova_23VP1
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// строка с регулярным выражением для проверки введенных данных
+        /// </summary>
         static string regex = @"^[A-Za-zА-Яа-яЁё]+((-|'| )[A-Za-zА-Яа-яЁё]+)*$";
+
+        /// <summary>
+        /// Конструктор формы
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// делегат, обновляет данные в таблице на форме
+        /// </summary>
         private void changeTable()
         {
             dataGridView1.DataSource = null;
@@ -24,6 +34,9 @@ namespace KP_OOP_Boyarinova_23VP1
             dataGridView1.DataSource = dt;
         }
 
+        /// <summary>
+        /// делегат, выводит в таблицу на форму результат последнего поиска/фильтрации
+        /// </summary>
         private void changeFilterTable()
         {
             dataGridView1.DataSource = null;
@@ -34,6 +47,11 @@ namespace KP_OOP_Boyarinova_23VP1
             dataGridView1.DataSource = dt;
         }
 
+        /// <summary>
+        /// фнукция, вызывается при загрузке формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Form1_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Бояринова М.Г. 23ВП1 ИС 'Конференция'", "Курсовой проект",
@@ -45,23 +63,43 @@ namespace KP_OOP_Boyarinova_23VP1
             changeTable();
         }
 
+        /// <summary>
+        /// функция, которая вызывается при загрузке формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void exit_Click(object sender, EventArgs e)
         {
             await ProxyDB.getInstance().synchronize_with_DB();
             Close();
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Создать базу данных" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void create_bd_Click(object sender, EventArgs e)
         {
             DB.Create_DB();
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Удалить базу данных" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void delete_bd_Click(object sender, EventArgs e)
         {
             await DB.Delete_DB();
             changeTable();
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Добавить запись" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void add_record_Click(object sender, EventArgs e)
         {
             /*получение и проверка данных*/
@@ -114,30 +152,37 @@ namespace KP_OOP_Boyarinova_23VP1
                     MessageBox.Show("Выберите специальность", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                ProxyDB.getInstance().Add(new Participant(ProxyDB.getInstance().Size() + 1, name, post, name_of_report, theme, section, speciality, type_of_participate));
+                ProxyDB.getInstance().Add(new Participant(0, name, post, name_of_report, theme, section, speciality, type_of_participate));
             }
             else
             {
                 type_of_participate = "слушатель";
-                ProxyDB.getInstance().Add(new Participant(ProxyDB.getInstance().Size() + 1, name, post, type_of_participate));
+                ProxyDB.getInstance().Add(new Participant(0, name, post, type_of_participate));
             }
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Удалить запись" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void delete_record_Click(object sender, EventArgs e)
         {
             ProxyDB.getInstance().NotifyRemove += changeTable;
             int id = Convert.ToInt32(numericUpDown1.Value);
-            id--;
             if (!ProxyDB.getInstance().Remove(id)) MessageBox.Show("Строки с таким индексом не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else MessageBox.Show("Строка удалена", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Строка удалена", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //попробовать изменить слушателя
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Изменить запись" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void change_record_Click(object sender, EventArgs e)
         {
             ProxyDB.getInstance().NotifyUpdate += changeTable;
             int id = Convert.ToInt32(numericUpDown1.Value);
-            id--;
             string name = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
             if (!Regex.IsMatch(name, regex))
             {
@@ -199,6 +244,11 @@ namespace KP_OOP_Boyarinova_23VP1
 
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Сортировать записи" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void sort_records_Click(object sender, EventArgs e)
         {
             if (DB.CheckDatabase())
@@ -219,6 +269,11 @@ namespace KP_OOP_Boyarinova_23VP1
             else MessageBox.Show("Базы данных с таким названием не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Фильтровать записи" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void filter_records_Click(object sender, EventArgs e)
         {
             //если не существует объектов, подходящих под условие - просто пустая таблица
@@ -233,11 +288,21 @@ namespace KP_OOP_Boyarinova_23VP1
             ProxyDB.getInstance().Filter(field, value);
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Сохранить базу данных в файл" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void save_into_file_Click(object sender, EventArgs e)
         {
             await DB.Export();
         }
 
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Найти запись" на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void find_button_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(numericUpDown1.Value);
@@ -249,6 +314,16 @@ namespace KP_OOP_Boyarinova_23VP1
         private void label16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// функция, вызывающаяся при нажатии на кнопку "Вывести все на форме
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void print_allbutton_Click(object sender, EventArgs e)
+        {
+            changeTable();
         }
     }
 }

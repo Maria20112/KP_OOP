@@ -17,12 +17,22 @@ namespace KP_OOP_Boyarinova_23VP1
         public string? Section { get; set; }
         public string? Speciality { get; set; }
         public string Type_of_participate { get; set; }
+        static int count_of_people = 0;
 
-        public Participant() {}
+        /*public Participant() 
+        {
+            count_of_people++;
+        }*/
 
         public Participant(int id, string name, string? post, string? name_of_report, string? theme, string? section, string? speciality, string type_of_participate)
         {
-            Id = id;
+            count_of_people++;
+            if (id != 0)
+            {
+                Id = id;
+                count_of_people = Math.Max(count_of_people, id);
+            }
+            else Id = count_of_people;
             Name = name;
             Post = post;
             Name_of_report = name_of_report;
@@ -34,7 +44,12 @@ namespace KP_OOP_Boyarinova_23VP1
 
         public Participant(int id, string name, string post,string type_of_participate)
         {
-            Id = id;
+            count_of_people++;
+            if (id != 0) { 
+                Id = id;
+                count_of_people = Math.Max(count_of_people, id);
+            }
+            else Id = count_of_people;
             Name = name;
             Post = post;
             Type_of_participate = type_of_participate;
