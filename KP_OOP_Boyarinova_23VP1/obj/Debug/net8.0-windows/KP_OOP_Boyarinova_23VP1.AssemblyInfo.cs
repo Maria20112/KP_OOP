@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KP_OOP_Boyarinova_23VP1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f11e92394e831bc4b94b0ecf42a847c75b9574d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afbce59e120db7769f8a262a961402ea2ae2bf19")]
 [assembly: System.Reflection.AssemblyProductAttribute("KP_OOP_Boyarinova_23VP1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KP_OOP_Boyarinova_23VP1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
