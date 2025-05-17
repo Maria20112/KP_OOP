@@ -35,7 +35,6 @@
             add_record = new Button();
             change_record = new Button();
             delete_record = new Button();
-            sort_records = new Button();
             filter_records = new Button();
             exit = new Button();
             label1 = new Label();
@@ -75,6 +74,7 @@
             label16 = new Label();
             print_allbutton = new Button();
             panel6 = new Panel();
+            count_of_showed_labels_label = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -146,16 +146,6 @@
             delete_record.UseVisualStyleBackColor = true;
             delete_record.Click += delete_record_Click;
             // 
-            // sort_records
-            // 
-            sort_records.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            sort_records.Location = new Point(1014, 13);
-            sort_records.Name = "sort_records";
-            sort_records.Size = new Size(162, 43);
-            sort_records.TabIndex = 6;
-            sort_records.Text = "Сортировать записи";
-            sort_records.UseVisualStyleBackColor = true;
-            // 
             // filter_records
             // 
             filter_records.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -170,7 +160,7 @@
             // exit
             // 
             exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            exit.Location = new Point(1288, 729);
+            exit.Location = new Point(1284, 721);
             exit.Name = "exit";
             exit.Size = new Size(94, 29);
             exit.TabIndex = 8;
@@ -263,21 +253,21 @@
             // 
             textBox1.Location = new Point(156, 81);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(151, 27);
             textBox1.TabIndex = 18;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(156, 117);
+            textBox2.Location = new Point(156, 114);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(151, 27);
             textBox2.TabIndex = 19;
             // 
             // textBox3
             // 
             textBox3.Location = new Point(156, 147);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
+            textBox3.Size = new Size(151, 27);
             textBox3.TabIndex = 20;
             // 
             // comboBox1
@@ -293,7 +283,7 @@
             // 
             textBox4.Location = new Point(156, 214);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
+            textBox4.Size = new Size(151, 27);
             textBox4.TabIndex = 22;
             // 
             // comboBox2
@@ -519,6 +509,7 @@
             // 
             panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel6.BackColor = Color.OldLace;
+            panel6.Controls.Add(count_of_showed_labels_label);
             panel6.Controls.Add(label10);
             panel6.Controls.Add(label16);
             panel6.Controls.Add(textBox5);
@@ -547,7 +538,6 @@
             panel6.Controls.Add(textBox1);
             panel6.Controls.Add(filter_records);
             panel6.Controls.Add(panel1);
-            panel6.Controls.Add(sort_records);
             panel6.Controls.Add(textBox2);
             panel6.Controls.Add(textBox3);
             panel6.Controls.Add(panel3);
@@ -567,6 +557,14 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(1393, 763);
             panel6.TabIndex = 47;
+            // 
+            // count_of_showed_labels_label
+            // 
+            count_of_showed_labels_label.AutoSize = true;
+            count_of_showed_labels_label.Location = new Point(478, 25);
+            count_of_showed_labels_label.Name = "count_of_showed_labels_label";
+            count_of_showed_labels_label.Size = new Size(0, 20);
+            count_of_showed_labels_label.TabIndex = 47;
             // 
             // Form1
             // 
@@ -596,7 +594,6 @@
         private Button add_record;
         private Button change_record;
         private Button delete_record;
-        private Button sort_records;
         private Button filter_records;
         private Button exit;
         private Label label1;
@@ -636,5 +633,6 @@
         private Label label16;
         private Button print_allbutton;
         private Panel panel6;
+        private Label count_of_showed_labels_label;
     }
 }

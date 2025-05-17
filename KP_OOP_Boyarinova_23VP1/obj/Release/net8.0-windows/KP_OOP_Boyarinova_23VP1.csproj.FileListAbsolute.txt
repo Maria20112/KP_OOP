@@ -74,6 +74,7 @@ D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Release\net8.0-
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Release\net8.0-windows\KP_OOP_Boyarinova_23VP1.pdb
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Release\net8.0-windows\KP_OOP_Boyarinova_23VP1.genruntimeconfig.cache
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Release\net8.0-windows\ref\KP_OOP_Boyarinova_23VP1.dll
+D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Release\net8.0-windows\KP_OOP_Boyarinova_23VP1.sourcelink.json
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\bin\Release\net8.0-windows\KP_OOP_Boyarinova_23VP1.dll.manifest
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\bin\Release\net8.0-windows\KP_OOP_Boyarinova_23VP1.application
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Release\net8.0-windows\KP_OOP_Boyarinova_23VP1.dll.manifest

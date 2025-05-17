@@ -6,10 +6,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 /**
  * поправить сохранение в файл
- * выровнять текстбоксы для ввода
- * убрать сортировку
- * добавить масштабирование окна
- * добавить запись "Выведено n записей из m"
+ * выровнять текстбоксы для ввода +
+ * убрать сортировку +
+ * добавить масштабирование окна +
+ * добавить запись "Выведено n записей из m" +
  * добавить ярлык на рабочий стол после установки
  * !гит
  */
@@ -45,6 +45,7 @@ namespace KP_OOP_Boyarinova_23VP1
             dataGridView1.Refresh();
             DataTable dt = ProxyDB.getInstance().GenerateData();
             dataGridView1.DataSource = dt;
+            count_of_showed_labels_label.Text = "Выведено " + dt.Rows.Count.ToString() + " записей из " + ProxyDB.getInstance().Size().ToString();
         }
 
         /// <summary>
@@ -58,6 +59,7 @@ namespace KP_OOP_Boyarinova_23VP1
             dataGridView1.Refresh();
             DataTable dt = ProxyDB.getInstance().GenerateFilterData();
             dataGridView1.DataSource = dt;
+            count_of_showed_labels_label.Text = "Выведено " + dt.Rows.Count.ToString() + " записей из " + ProxyDB.getInstance().Size().ToString();
         }
 
         /// <summary>
