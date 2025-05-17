@@ -61,19 +61,15 @@ namespace KP_OOP_Boyarinova_23VP1
                     await command.ExecuteNonQueryAsync();
                     MessageBox.Show("База данных создана", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                //SqlConnection connection1 = new SqlConnection("Server=localhost\\SQLEXPRESS;Database=conferencedb;Trusted_Connection=True;TrustServerCertificate=True;");
 
                 using (SqlConnection connection = new SqlConnection(databaseConnectionString))
                 {
                     await connection.OpenAsync();
                     SqlCommand command1 = new SqlCommand();
                     command1.CommandText = "CREATE TABLE Users (Id INT PRIMARY KEY,Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
-                    //command1.CommandText = "CREATE TABLE Users (Id INT PRIMARY KEY IDENTITY(1,1),Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
-                    //command1.CommandText = "CREATE TABLE Users (Name VARCHAR(100) NOT NULL, PostOfParticipant VARCHAR(100), NameOfReport VARCHAR(100), Theme VARCHAR(100), Section VARCHAR(100), Speciality VARCHAR(100), TypeOfParticipate VARCHAR(100))";
                     command1.Connection = connection;
                     await command1.ExecuteNonQueryAsync();
                     MessageBox.Show("Таблица Users создана", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Console.Read();
                 }
             }
             else MessageBox.Show("База данных уже существует", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -128,7 +124,6 @@ namespace KP_OOP_Boyarinova_23VP1
                         // выполняем команду
                         await command.ExecuteNonQueryAsync();
                         MessageBox.Show("База данных удалена", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //connection.Close();
                     }
                 }
                 else MessageBox.Show("Базы данных не существует", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -136,9 +131,7 @@ namespace KP_OOP_Boyarinova_23VP1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //Win32.MessageBox(0, ex.Message, "", 0);
             }
-            //Console.Read();
         }
 
         /// <summary>
@@ -147,7 +140,6 @@ namespace KP_OOP_Boyarinova_23VP1
         /// <returns></returns>
         public static bool CheckDatabase()
         {
-            //string connString = "Server=localhost\\SQLEXPRESS;Integrated Security=SSPI;database=master";
             string cmdText = @"if Exists(select 1 from master.dbo.sysdatabases where name=@db) 
                        select 1 else select 0";
             using (SqlConnection sqlConnection = new SqlConnection(generalConnectionString))
@@ -181,15 +173,12 @@ namespace KP_OOP_Boyarinova_23VP1
 
                     SqlCommand command = new SqlCommand(sqlExpression, connection);
                     int number = await command.ExecuteNonQueryAsync();
-                    //Win32.MessageBox(0, $"Добавлено объектов: {number}", "", 0);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //Win32.MessageBox(0, ex.Message, "", 0);
             }
-            //Console.Read();
         }
 
         /// <summary>
@@ -233,7 +222,6 @@ namespace KP_OOP_Boyarinova_23VP1
 
                 try
                 {
-                    //connetionString = "Data Source=YourServerName;Initial Catalog=pubs;User ID=sa;Password=zen412";
                     using (SqlConnection connection = new SqlConnection(databaseConnectionString))
                     {
                         SqlCommand command;

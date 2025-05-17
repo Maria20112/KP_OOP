@@ -4,16 +4,6 @@ using System.Text.RegularExpressions;
 using System.Runtime.CompilerServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-/**
- * поправить сохранение в файл
- * выровнять текстбоксы для ввода +
- * убрать сортировку +
- * добавить масштабирование окна +
- * добавить запись "Выведено n записей из m" +
- * добавить ярлык на рабочий стол после установки
- * !гит
- */
-
 namespace KP_OOP_Boyarinova_23VP1
 {
     /// <summary>
@@ -71,8 +61,6 @@ namespace KP_OOP_Boyarinova_23VP1
         {
             MessageBox.Show("Бояринова М.Г. 23ВП1 ИС 'Конференция'", "Курсовой проект",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //Win32.MessageBox(0, "Бояринова М.Г. 23ВП1 ИС 'Конференция'", "Курсовой проект", 0);
             ProxyDB.getInstance(); //создаем объект ProxyDB, в конструкторе получаем данные из бд
             await DB.Get_all_from_DB();
             changeTable();
@@ -119,19 +107,16 @@ namespace KP_OOP_Boyarinova_23VP1
         private void add_record_Click(object sender, EventArgs e)
         {
             /*получение и проверка данных*/
-            //Regex.IsMatch(data, regex);
             ProxyDB.getInstance().NotifyAdd += changeTable;
             string name = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
             if (!Regex.IsMatch(name, regex))
             {
                 MessageBox.Show("Некорректное имя", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //   Win32.MessageBox(0, "Некорректное имя", "Ошибка ввода", 0);
                 return;
             }
             string post = comboBox1.Text;
             if (post == "")
             {
-                //Win32.MessageBox(0, "Выберите должность", "Ошибка ввода", 0);
                 MessageBox.Show("Выберите должность", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -255,12 +240,6 @@ namespace KP_OOP_Boyarinova_23VP1
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         /// <summary>
         /// функция, вызывающаяся при нажатии на кнопку "Фильтровать записи" на форме
         /// </summary>
@@ -316,11 +295,6 @@ namespace KP_OOP_Boyarinova_23VP1
         private void print_allbutton_Click(object sender, EventArgs e)
         {
             changeTable();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

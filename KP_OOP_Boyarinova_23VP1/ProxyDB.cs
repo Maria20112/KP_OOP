@@ -56,16 +56,6 @@ namespace KP_OOP_Boyarinova_23VP1
         }
 
         /// <summary>
-        /// функция, сортирующая по имени по возрастанию/по убыванию
-        /// </summary>
-        /// <param name="type">направление сортировки</param>
-        public void Sort(bool type)
-        {
-            if (type) participants.Sort((x, y) => x.Name.CompareTo(y.Name)); //по возрастанию
-            else participants.Sort((x, y) => y.Name.CompareTo(x.Name)); //по убыванию
-            NotifySort?.Invoke();
-        }
-        /// <summary>
         /// возвращает ссылку на единственный существующий объект класса
         /// </summary>
         /// <returns>ссылку на единственный существующий объект класса</returns>
@@ -77,11 +67,6 @@ namespace KP_OOP_Boyarinova_23VP1
             }
             return instance;
         }
-
-        /*public void Add_filter(Participant? p)
-        {
-            NotifyFilter?.Invoke();
-        }*/
 
         /// <summary>
         /// фильтрует участников по значению указанного поля
@@ -209,20 +194,12 @@ namespace KP_OOP_Boyarinova_23VP1
             if (DB.CheckDatabase())
             {
                 if (id >= Participant.count_of_people) return false;
-                /*participants[id].Name = p.Name;
-                participants[id].Post = p.Post;
-                participants[id].Name_of_report = p.Name_of_report;
-                participants[id].Theme = p.Theme;
-                participants[id].Section = p.Section;
-                participants[id].Speciality = p.Speciality;
-                participants[id].Type_of_participate = p.Type_of_participate;*/
                 last_filter = from i in participants
                               where i.Id == id
                               orderby i.Id
                               select i;
                 if (last_filter.Count() > 0)
                 {
-                    //participants.Remove(last_filter.First());
                     participants.Add(new Participant(last_filter.First().Id, p.Name, p.Post, p.Name_of_report, p.Theme,
                         p.Section, p.Speciality, p.Type_of_participate));
                     participants.Remove(last_filter.First());
@@ -330,7 +307,7 @@ namespace KP_OOP_Boyarinova_23VP1
         /// <returns>true - участник найден</returns>
         public bool Find(int id)
         {
-            if (/*id > participants.Count*/ id > Participant.count_of_people) return false;
+            if (id > Participant.count_of_people) return false;
             last_filter = from p in participants
                           where p.Id == id
                           orderby p.Id

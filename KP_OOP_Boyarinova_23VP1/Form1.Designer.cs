@@ -294,7 +294,6 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(151, 28);
             comboBox2.TabIndex = 23;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox3
             // 
@@ -412,8 +411,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1056, 403);
             dataGridView1.TabIndex = 34;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
+            //
             // label12
             // 
             label12.Anchor = AnchorStyles.Top;
