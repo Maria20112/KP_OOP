@@ -22,11 +22,24 @@ using System.Reflection.Metadata;
 
 namespace KP_OOP_Boyarinova_23VP1
 {
+    /// <summary>
+    /// статический класс, содержащий функции, которые обеспечивают взаимодействие программы с БД
+    /// </summary>
     internal static class DB
     {
+        /// <summary>
+        /// строка подключения к master
+        /// </summary>
         private static string generalConnectionString = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=True;";
+        /// <summary>
+        /// строка подключения к БД
+        /// </summary>
         private static string databaseConnectionString = "Server=localhost\\SQLEXPRESS;Database=conferencedb;Trusted_Connection=True;TrustServerCertificate=True;";
 
+        /// <summary>
+        /// функция, создает БД
+        /// </summary>
+        /// <returns></returns>
         public static async Task Create_DB()
         {
             if (!CheckDatabase())
@@ -65,6 +78,11 @@ namespace KP_OOP_Boyarinova_23VP1
             }
             else MessageBox.Show("База данных уже существует", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        /// <summary>
+        /// функция, очищает таблицу БД
+        /// </summary>
+        /// <returns></returns>
         public static async Task Clear_table()
         {
             using (SqlConnection connection = new SqlConnection(databaseConnectionString))
@@ -79,6 +97,10 @@ namespace KP_OOP_Boyarinova_23VP1
                 await command.ExecuteNonQueryAsync();
             }
         }
+        /// <summary>
+        /// функция, удаляет БД
+        /// </summary>
+        /// <returns></returns>
         public static async Task Delete_DB()
         {
             try
@@ -119,6 +141,10 @@ namespace KP_OOP_Boyarinova_23VP1
             //Console.Read();
         }
 
+        /// <summary>
+        /// функция, проверяет наличие БД
+        /// </summary>
+        /// <returns></returns>
         public static bool CheckDatabase()
         {
             //string connString = "Server=localhost\\SQLEXPRESS;Integrated Security=SSPI;database=master";
@@ -136,6 +162,11 @@ namespace KP_OOP_Boyarinova_23VP1
             }
         }
 
+        /// <summary>
+        /// функция, добавляет новую строку в БД
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static async Task Add_new_row(Participant p)
         {
             try
@@ -161,6 +192,10 @@ namespace KP_OOP_Boyarinova_23VP1
             //Console.Read();
         }
 
+        /// <summary>
+        /// функция, получает информацию из БД
+        /// </summary>
+        /// <returns></returns>
         public static async Task Get_all_from_DB()
         {
             if (CheckDatabase())
@@ -187,6 +222,10 @@ namespace KP_OOP_Boyarinova_23VP1
             else MessageBox.Show("Базы данных не существует", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// функция, сохраняет БД в отдельный файл (pdf)
+        /// </summary>
+        /// <returns></returns>
         public static async Task Export()
         {
             if (CheckDatabase()) { 

@@ -4,8 +4,21 @@ using System.Text.RegularExpressions;
 using System.Runtime.CompilerServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
+/**
+ * поправить сохранение в файл
+ * выровнять текстбоксы для ввода
+ * убрать сортировку
+ * добавить масштабирование окна
+ * добавить запись "Выведено n записей из m"
+ * добавить ярлык на рабочий стол после установки
+ * !гит
+ */
+
 namespace KP_OOP_Boyarinova_23VP1
 {
+    /// <summary>
+    /// класс, описывающий взаимодействие пользователя с UI
+    /// </summary>
     public partial class Form1 : Form
     {
         /// <summary>
@@ -92,6 +105,7 @@ namespace KP_OOP_Boyarinova_23VP1
         private async void delete_bd_Click(object sender, EventArgs e)
         {
             await DB.Delete_DB();
+            ProxyDB.getInstance().Clear_table();
             changeTable();
         }
 
@@ -279,11 +293,11 @@ namespace KP_OOP_Boyarinova_23VP1
             //если не существует объектов, подходящих под условие - просто пустая таблица
             string field = comboBox5.Text, value = textBox5.Text;
             if (value == "") MessageBox.Show("Некорректное значение поля для фильтрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            /*if (!Regex.IsMatch(value, regex))
+            if (!Regex.IsMatch(value, regex) && field != "Id")
             {
                 MessageBox.Show("Некорректное значение поля для фильтрации", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }*/
+            }
             ProxyDB.getInstance().NotifyFilter += changeFilterTable;
             ProxyDB.getInstance().Filter(field, value);
         }

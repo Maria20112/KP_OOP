@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             create_bd = new Button();
             delete_bd = new Button();
             save_into_file = new Button();
@@ -579,6 +580,7 @@
             Controls.Add(delete_bd);
             Controls.Add(create_bd);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "ИС \"Конференция\"";
             Load += Form1_Load;
