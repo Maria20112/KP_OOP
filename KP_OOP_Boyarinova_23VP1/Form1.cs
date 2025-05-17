@@ -258,30 +258,6 @@ namespace KP_OOP_Boyarinova_23VP1
 
         }
 
-        /// <summary>
-        /// функция, вызывающаяся при нажатии на кнопку "Сортировать записи" на форме
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void sort_records_Click(object sender, EventArgs e)
-        {
-            if (DB.CheckDatabase())
-            {
-                ProxyDB.getInstance().NotifySort += changeTable;
-                if (radioButton3.Checked)
-                {
-                    ProxyDB.getInstance().Sort(true);
-                    return;
-                }
-                if (radioButton4.Checked)
-                {
-                    ProxyDB.getInstance().Sort(false);
-                    return;
-                }
-                MessageBox.Show("Выберите направление сортировки", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else MessageBox.Show("Базы данных с таким названием не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
 
         /// <summary>
         /// функция, вызывающаяся при нажатии на кнопку "Фильтровать записи" на форме
@@ -338,6 +314,11 @@ namespace KP_OOP_Boyarinova_23VP1
         private void print_allbutton_Click(object sender, EventArgs e)
         {
             changeTable();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

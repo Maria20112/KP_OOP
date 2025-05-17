@@ -68,23 +68,23 @@
             label12 = new Label();
             label13 = new Label();
             comboBox5 = new ComboBox();
-            label14 = new Label();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
             label15 = new Label();
             textBox5 = new TextBox();
             panel5 = new Panel();
             find_button = new Button();
             label16 = new Label();
             print_allbutton = new Button();
+            panel6 = new Panel();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // create_bd
             // 
-            create_bd.Location = new Point(12, 702);
+            create_bd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            create_bd.Location = new Point(21, 711);
             create_bd.Name = "create_bd";
             create_bd.Size = new Size(160, 49);
             create_bd.TabIndex = 0;
@@ -94,7 +94,8 @@
             // 
             // delete_bd
             // 
-            delete_bd.Location = new Point(231, 702);
+            delete_bd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            delete_bd.Location = new Point(222, 711);
             delete_bd.Name = "delete_bd";
             delete_bd.Size = new Size(160, 49);
             delete_bd.TabIndex = 1;
@@ -104,7 +105,8 @@
             // 
             // save_into_file
             // 
-            save_into_file.Location = new Point(450, 703);
+            save_into_file.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            save_into_file.Location = new Point(441, 711);
             save_into_file.Name = "save_into_file";
             save_into_file.Size = new Size(160, 48);
             save_into_file.TabIndex = 2;
@@ -114,7 +116,7 @@
             // 
             // add_record
             // 
-            add_record.Location = new Point(73, 417);
+            add_record.Location = new Point(82, 424);
             add_record.Name = "add_record";
             add_record.Size = new Size(162, 46);
             add_record.TabIndex = 3;
@@ -124,7 +126,8 @@
             // 
             // change_record
             // 
-            change_record.Location = new Point(73, 616);
+            change_record.Anchor = AnchorStyles.Left;
+            change_record.Location = new Point(70, 601);
             change_record.Name = "change_record";
             change_record.Size = new Size(165, 28);
             change_record.TabIndex = 4;
@@ -134,7 +137,8 @@
             // 
             // delete_record
             // 
-            delete_record.Location = new Point(73, 583);
+            delete_record.Anchor = AnchorStyles.Left;
+            delete_record.Location = new Point(70, 568);
             delete_record.Name = "delete_record";
             delete_record.Size = new Size(165, 27);
             delete_record.TabIndex = 5;
@@ -144,17 +148,18 @@
             // 
             // sort_records
             // 
-            sort_records.Location = new Point(1018, 5);
+            sort_records.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            sort_records.Location = new Point(1014, 13);
             sort_records.Name = "sort_records";
             sort_records.Size = new Size(162, 43);
             sort_records.TabIndex = 6;
             sort_records.Text = "Сортировать записи";
             sort_records.UseVisualStyleBackColor = true;
-            sort_records.Click += sort_records_Click;
             // 
             // filter_records
             // 
-            filter_records.Location = new Point(1207, 5);
+            filter_records.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            filter_records.Location = new Point(1203, 13);
             filter_records.Name = "filter_records";
             filter_records.Size = new Size(163, 43);
             filter_records.TabIndex = 7;
@@ -164,7 +169,8 @@
             // 
             // exit
             // 
-            exit.Location = new Point(1286, 712);
+            exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            exit.Location = new Point(1288, 729);
             exit.Name = "exit";
             exit.Size = new Size(94, 29);
             exit.TabIndex = 8;
@@ -175,7 +181,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 81);
+            label1.Location = new Point(19, 88);
             label1.Name = "label1";
             label1.Size = new Size(73, 20);
             label1.TabIndex = 9;
@@ -184,7 +190,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 110);
+            label2.Location = new Point(21, 117);
             label2.Name = "label2";
             label2.Size = new Size(39, 20);
             label2.TabIndex = 10;
@@ -193,7 +199,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(11, 140);
+            label3.Location = new Point(20, 147);
             label3.Name = "label3";
             label3.Size = new Size(72, 20);
             label3.TabIndex = 11;
@@ -202,7 +208,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(11, 173);
+            label4.Location = new Point(20, 180);
             label4.Name = "label4";
             label4.Size = new Size(86, 20);
             label4.TabIndex = 12;
@@ -211,7 +217,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(11, 210);
+            label5.Location = new Point(20, 217);
             label5.Name = "label5";
             label5.Size = new Size(137, 20);
             label5.TabIndex = 13;
@@ -220,7 +226,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 248);
+            label6.Location = new Point(21, 255);
             label6.Name = "label6";
             label6.Size = new Size(74, 20);
             label6.TabIndex = 14;
@@ -229,7 +235,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(11, 282);
+            label7.Location = new Point(20, 289);
             label7.Name = "label7";
             label7.Size = new Size(59, 20);
             label7.TabIndex = 15;
@@ -238,7 +244,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(11, 313);
+            label8.Location = new Point(20, 320);
             label8.Name = "label8";
             label8.Size = new Size(116, 20);
             label8.TabIndex = 16;
@@ -247,7 +253,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(12, 350);
+            label9.Location = new Point(21, 357);
             label9.Name = "label9";
             label9.Size = new Size(92, 20);
             label9.TabIndex = 17;
@@ -255,21 +261,21 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(147, 74);
+            textBox1.Location = new Point(156, 81);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 18;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(147, 110);
+            textBox2.Location = new Point(156, 117);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 19;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(147, 140);
+            textBox3.Location = new Point(156, 147);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(125, 27);
             textBox3.TabIndex = 20;
@@ -278,14 +284,14 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "преподаватель", "аспирант", "студент" });
-            comboBox1.Location = new Point(147, 173);
+            comboBox1.Location = new Point(156, 180);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 21;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(147, 207);
+            textBox4.Location = new Point(156, 214);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(125, 27);
             textBox4.TabIndex = 22;
@@ -294,7 +300,7 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Системное администрирование", "Шифрование", "Прикладное программное обеспечение" });
-            comboBox2.Location = new Point(147, 242);
+            comboBox2.Location = new Point(156, 249);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(151, 28);
             comboBox2.TabIndex = 23;
@@ -304,7 +310,7 @@
             // 
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Программная инженерия", "Информационные системы", "Прикладная информатика" });
-            comboBox3.Location = new Point(147, 276);
+            comboBox3.Location = new Point(156, 283);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(151, 28);
             comboBox3.TabIndex = 24;
@@ -313,7 +319,7 @@
             // 
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "Программная инженерия", "Прикладная информатика", "Компьютерные технологии" });
-            comboBox4.Location = new Point(147, 310);
+            comboBox4.Location = new Point(156, 317);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(151, 28);
             comboBox4.TabIndex = 25;
@@ -321,7 +327,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(147, 344);
+            radioButton1.Location = new Point(156, 351);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(104, 24);
             radioButton1.TabIndex = 26;
@@ -332,7 +338,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(147, 374);
+            radioButton2.Location = new Point(156, 381);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(129, 24);
             radioButton2.TabIndex = 27;
@@ -344,7 +350,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label10.Location = new Point(68, 17);
+            label10.Location = new Point(77, 24);
             label10.Name = "label10";
             label10.Size = new Size(170, 20);
             label10.TabIndex = 28;
@@ -352,7 +358,8 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(73, 550);
+            numericUpDown1.Anchor = AnchorStyles.Left;
+            numericUpDown1.Location = new Point(70, 535);
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(162, 27);
@@ -361,9 +368,10 @@
             // 
             // label11
             // 
+            label11.Anchor = AnchorStyles.Left;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label11.Location = new Point(57, 509);
+            label11.Location = new Point(54, 494);
             label11.Name = "label11";
             label11.Size = new Size(185, 20);
             label11.TabIndex = 30;
@@ -371,17 +379,19 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = SystemColors.ControlDark;
-            panel1.Location = new Point(0, 686);
+            panel1.Location = new Point(0, 695);
             panel1.Name = "panel1";
             panel1.Size = new Size(1386, 10);
             panel1.TabIndex = 31;
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel2.BackColor = SystemColors.ControlDark;
             panel2.Controls.Add(panel4);
-            panel2.Location = new Point(304, 1);
+            panel2.Location = new Point(313, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(10, 692);
             panel2.TabIndex = 32;
@@ -396,26 +406,30 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Left;
             panel3.BackColor = SystemColors.ControlDark;
-            panel3.Location = new Point(0, 482);
+            panel3.Location = new Point(3, 476);
             panel3.Name = "panel3";
             panel3.Size = new Size(314, 10);
             panel3.TabIndex = 33;
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(333, 60);
+            dataGridView1.Location = new Point(333, 67);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1053, 403);
+            dataGridView1.Size = new Size(1056, 403);
             dataGridView1.TabIndex = 34;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label12
             // 
+            label12.Anchor = AnchorStyles.Top;
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label12.Location = new Point(805, 14);
+            label12.Location = new Point(801, 22);
             label12.Name = "label12";
             label12.Size = new Size(137, 23);
             label12.TabIndex = 35;
@@ -423,8 +437,9 @@
             // 
             // label13
             // 
+            label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label13.AutoSize = true;
-            label13.Location = new Point(764, 495);
+            label13.Location = new Point(350, 517);
             label13.Name = "label13";
             label13.Size = new Size(119, 20);
             label13.TabIndex = 36;
@@ -432,49 +447,19 @@
             // 
             // comboBox5
             // 
+            comboBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             comboBox5.FormattingEnabled = true;
             comboBox5.Items.AddRange(new object[] { "Id", "Имя", "Должность", "Название доклада", "Тематика", "Секция", "Специальность", "Тип участия" });
-            comboBox5.Location = new Point(764, 518);
+            comboBox5.Location = new Point(350, 540);
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(151, 28);
             comboBox5.TabIndex = 37;
             // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label14.Location = new Point(409, 472);
-            label14.Name = "label14";
-            label14.Size = new Size(201, 20);
-            label14.TabIndex = 38;
-            label14.Text = "Сортировать по имени по:";
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(436, 505);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(123, 24);
-            radioButton3.TabIndex = 39;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Возрастанию";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(436, 535);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(105, 24);
-            radioButton4.TabIndex = 40;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Убыванию";
-            radioButton4.UseVisualStyleBackColor = true;
-            // 
             // label15
             // 
+            label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label15.AutoSize = true;
-            label15.Location = new Point(764, 560);
+            label15.Location = new Point(350, 582);
             label15.Name = "label15";
             label15.Size = new Size(351, 20);
             label15.TabIndex = 41;
@@ -482,22 +467,25 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(764, 583);
+            textBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            textBox5.Location = new Point(350, 605);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(125, 27);
             textBox5.TabIndex = 42;
             // 
             // panel5
             // 
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel5.BackColor = SystemColors.ControlDark;
-            panel5.Location = new Point(712, 464);
+            panel5.Location = new Point(742, 464);
             panel5.Name = "panel5";
             panel5.Size = new Size(10, 232);
             panel5.TabIndex = 43;
             // 
             // find_button
             // 
-            find_button.Location = new Point(73, 651);
+            find_button.Anchor = AnchorStyles.Left;
+            find_button.Location = new Point(70, 636);
             find_button.Name = "find_button";
             find_button.Size = new Size(165, 29);
             find_button.TabIndex = 44;
@@ -507,9 +495,10 @@
             // 
             // label16
             // 
+            label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label16.Location = new Point(758, 472);
+            label16.Location = new Point(344, 494);
             label16.Name = "label16";
             label16.Size = new Size(184, 20);
             label16.TabIndex = 45;
@@ -518,7 +507,7 @@
             // 
             // print_allbutton
             // 
-            print_allbutton.Location = new Point(333, 5);
+            print_allbutton.Location = new Point(329, 13);
             print_allbutton.Name = "print_allbutton";
             print_allbutton.Size = new Size(143, 43);
             print_allbutton.TabIndex = 46;
@@ -526,59 +515,66 @@
             print_allbutton.UseVisualStyleBackColor = true;
             print_allbutton.Click += print_allbutton_Click;
             // 
+            // panel6
+            // 
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel6.BackColor = Color.OldLace;
+            panel6.Controls.Add(label10);
+            panel6.Controls.Add(label16);
+            panel6.Controls.Add(textBox5);
+            panel6.Controls.Add(print_allbutton);
+            panel6.Controls.Add(label15);
+            panel6.Controls.Add(panel5);
+            panel6.Controls.Add(comboBox5);
+            panel6.Controls.Add(add_record);
+            panel6.Controls.Add(label13);
+            panel6.Controls.Add(label1);
+            panel6.Controls.Add(find_button);
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(label3);
+            panel6.Controls.Add(save_into_file);
+            panel6.Controls.Add(exit);
+            panel6.Controls.Add(delete_bd);
+            panel6.Controls.Add(label4);
+            panel6.Controls.Add(create_bd);
+            panel6.Controls.Add(label5);
+            panel6.Controls.Add(label6);
+            panel6.Controls.Add(dataGridView1);
+            panel6.Controls.Add(label7);
+            panel6.Controls.Add(label12);
+            panel6.Controls.Add(label8);
+            panel6.Controls.Add(label9);
+            panel6.Controls.Add(textBox1);
+            panel6.Controls.Add(filter_records);
+            panel6.Controls.Add(panel1);
+            panel6.Controls.Add(sort_records);
+            panel6.Controls.Add(textBox2);
+            panel6.Controls.Add(textBox3);
+            panel6.Controls.Add(panel3);
+            panel6.Controls.Add(label11);
+            panel6.Controls.Add(numericUpDown1);
+            panel6.Controls.Add(comboBox1);
+            panel6.Controls.Add(panel2);
+            panel6.Controls.Add(textBox4);
+            panel6.Controls.Add(comboBox2);
+            panel6.Controls.Add(delete_record);
+            panel6.Controls.Add(comboBox3);
+            panel6.Controls.Add(change_record);
+            panel6.Controls.Add(comboBox4);
+            panel6.Controls.Add(radioButton1);
+            panel6.Controls.Add(radioButton2);
+            panel6.Location = new Point(2, 12);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1393, 763);
+            panel6.TabIndex = 47;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
             ClientSize = new Size(1392, 772);
-            Controls.Add(print_allbutton);
-            Controls.Add(label16);
-            Controls.Add(find_button);
-            Controls.Add(panel5);
-            Controls.Add(textBox5);
-            Controls.Add(label15);
-            Controls.Add(radioButton4);
-            Controls.Add(radioButton3);
-            Controls.Add(label14);
-            Controls.Add(comboBox5);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(label11);
-            Controls.Add(numericUpDown1);
-            Controls.Add(label10);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(comboBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(textBox4);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(exit);
-            Controls.Add(filter_records);
-            Controls.Add(sort_records);
-            Controls.Add(delete_record);
-            Controls.Add(change_record);
-            Controls.Add(add_record);
-            Controls.Add(save_into_file);
-            Controls.Add(delete_bd);
-            Controls.Add(create_bd);
+            Controls.Add(panel6);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
@@ -587,8 +583,9 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -632,14 +629,12 @@
         private Label label13;
         private ComboBox comboBox5;
         private Panel panel4;
-        private Label label14;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
         private Label label15;
         private TextBox textBox5;
         private Panel panel5;
         private Button find_button;
         private Label label16;
         private Button print_allbutton;
+        private Panel panel6;
     }
 }

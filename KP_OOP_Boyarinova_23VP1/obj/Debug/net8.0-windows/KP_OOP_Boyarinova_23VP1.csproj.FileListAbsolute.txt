@@ -74,3 +74,4 @@ D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\bin\Debug\net8.0-wi
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\bin\Debug\net8.0-windows\de\PdfSharp.resources.dll
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
 D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\bin\Debug\net8.0-windows\itextsharp.dll
+D:\Пгу\C#\KP_OOP_Boyarinova_23VP1\KP_OOP_Boyarinova_23VP1\obj\Debug\net8.0-windows\KP_OOP_Boyarinova_23VP1.sourcelink.json
